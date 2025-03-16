@@ -459,4 +459,10 @@ footer a.creator-link:hover {
         margin-top: 10px;
         margin-bottom: 5px;
     }
+
+    /* Ajuste no rodapé para smartphones */
+    footer {
+        font-size: 12px; /* Reduz o tamanho da fonte */
+        padding: 15px; /* Reduz o padding para equilibrar */
+    }
 }
