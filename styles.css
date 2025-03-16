@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    background-color: #F5E6E8;
+    margin-bottom: 60px; /* Espaço para o rodapé fixo */
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px; /* Mantém a altura original */
+    background-color: #FFF8F5;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 80px; /* Tamanho ajustado anteriormente */
+    height: auto;
+    margin-right: 10px; /* Ajusta o espaçamento para equilibrar */
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #333333;
+    margin: 0; /* Remove margem padrão */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #D3D3D3;
+}
+
+/* Seções com Parallax */
+.parallax-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    background-size: contain; /* Ajusta para conter a imagem sem distorção */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Efeito Parallax */
+    background-color: #FFF8F5; /* Cor de fundo padrão para áreas não cobertas */
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: inherit; /* Herda o background-size da seção pai */
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+/* Animação de Fade apenas no conteúdo */
+.fade-content {
+    opacity: 0; /* Começa invisível */
+    transition: opacity 1s ease-in-out; /* Transição suave de 1 segundo */
+}
+
+.fade-content.fade-in {
+    opacity: 1; /* Torna visível quando entra na viewport */
+}
+
+/* Seções Normais */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+    background-size: contain; /* Ajusta para conter a imagem sem distorção */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Efeito Parallax */
+    min-height: 100vh; /* Garante altura total da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF8F5; /* Fundo padrão */
+    padding-bottom: 80px; /* Espaço extra para evitar sobreposição do rodapé */
+}
+
+/* Conteúdo */
+.content {
+    background: rgba(255, 248, 245, 0.8); /* Caixa com transparência */
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 90%; /* Permite que o conteúdo se ajuste melhor */
+}
+
+.content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Texto das redes sociais */
+.social-text {
+    font-size: 16px;
+    color: #333333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Grupo de Botões */
+.button-group {
+    display: flex;
+    gap: 15px; /* Espaço entre os botões */
+    justify-content: center; /* Centraliza os botões */
+    flex-wrap: wrap; /* Permite que os botões quebrem linha em telas pequenas */
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FAF3E0;
+    color: #333333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #D3D3D3;
+}
+
+.btn i {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    font-size: 18px; /* Tamanho do ícone */
+}
+
+.btn-whatsapp {
+    background-color: #25D366; /* Cor oficial do WhatsApp */
+    color: #fff;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1EBE54; /* Cor mais escura ao passar o mouse */
+}
+
+.btn-instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); /* Gradiente do Instagram */
+    color: #fff;
+}
+
+.btn-instagram:hover {
+    background: linear-gradient(45deg, #d1842c, #c95b35, #bf233b, #b01f58, #a11677); /* Gradiente mais escuro */
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Ajuste para proporção 4:5 */
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 200px; /* Proporção 4:5 (largura 160px para altura 200px) */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Formulário de Contato */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    border: 1px solid #D3D3D3;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+form textarea {
+    resize: none;
+    height: 100px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #FAF3E0;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #D3D3D3;
+}
+
+.signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: 120px;
+    color: #333333;
+    margin-top: 40px;
+    display: block; /* Garante que a assinatura ocupe espaço próprio */
+    text-align: center; /* Centraliza a assinatura */
+}
+
+/* Rodapé Fixo */
+footer {
+    background-color: #333333;
+    color: #FFF8F5;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px; /* Mantém a altura original */
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .logo-image {
+        width: 64px; /* 80% de 80px para telas menores */
+        margin-right: 8px;
+    }
+
+    .content h2 {
+        font-size: 28px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .image-grid img {
+        height: 150px; /* Proporção 4:5 (largura 120px para altura 150px) */
+    }
+
+    .parallax-section,
+    .section {
+        padding: 60px 10px;
+        min-height: 100vh; /* Mantém altura total mesmo em telas menores */
+        padding-bottom: 80px; /* Espaço para o rodapé */
+    }
+
+    .parallax-section,
+    .section {
+        background-size: contain; /* Mantém a proporção em telas menores */
+    }
+
+    .signature {
+        font-size: 80px; /* Reduz o tamanho em telas menores */
+        margin-top: 30px;
+    }
+
+    form {
+        max-width: 100%;
+    }
+
+    .button-group {
+        gap: 10px; /* Reduz o espaço entre os botões em telas menores */
+    }
+
+    .btn {
+        padding: 8px 15px; /* Reduz o padding dos botões */
+        font-size: 14px; /* Reduz o tamanho da fonte */
+    }
+
+    .btn i {
+        font-size: 16px; /* Ajusta o tamanho do ícone */
+    }
+
+    .social-text {
+        font-size: 14px;
+        margin-top: 15px;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 20px;
+    }
+
+    .btn {
+        padding: 6px 12px; /* Reduz ainda mais o padding */
+        font-size: 12px; /* Reduz ainda mais a fonte */
+    }
+
+    .btn i {
+        font-size: 14px; /* Ajusta o tamanho do ícone */
+        margin-right: 5px; /* Reduz o espaço entre ícone e texto */
+    }
+
+    .image-grid img {
+        height: 150px; /* Mantém a proporção 4:5 em telas muito pequenas */
+    }
+
+    .parallax-section,
+    .section {
+        background-size: contain; /* Ajuste para telas ainda menores */
+    }
+
+    .section {
+        padding-bottom: 80px; /* Espaço para o rodapé */
+    }
+
+    .logo-image {
+        width: 48px; /* 60% de 80px para telas muito pequenas */
+        margin-right: 6px;
+    }
+
+    .logo h1 {
+        font-size: 18px;
+    }
+
+    .signature {
+        font-size: 60px; /* Reduz ainda mais em telas muito pequenas */
+        margin-top: 20px;
+    }
+
+    .social-text {
+        font-size: 12px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+}
