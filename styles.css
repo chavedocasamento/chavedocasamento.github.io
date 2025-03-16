@@ -72,14 +72,6 @@ nav a:hover {
     color: #D3D3D3;
 }
 
-/* Logotipo na Seção */
-.section-logo {
-    display: block;
-    width: 120px; /* Tamanho inicial para desktop */
-    height: auto;
-    margin: 0 auto 20px; /* Centraliza e adiciona espaço abaixo */
-}
-
 /* Seções com Parallax */
 .parallax-section {
     position: relative;
@@ -312,12 +304,6 @@ footer a.creator-link:hover {
         margin-right: 10px;
     }
 
-    /* Ajuste do logotipo na seção */
-    .section-logo {
-        width: 96px; /* Reduzido proporcionalmente para tablet */
-        margin-bottom: 15px;
-    }
-
     /* Menu Hamburger */
     .menu-icon {
         display: block;
@@ -428,12 +414,6 @@ footer a.creator-link:hover {
 
     .logo h1 {
         font-size: 18px;
-    }
-
-    /* Ajuste do logotipo na seção */
-    .section-logo {
-        width: 72px; /* Reduzido proporcionalmente para smartphone */
-        margin-bottom: 10px;
     }
 
     .content {
