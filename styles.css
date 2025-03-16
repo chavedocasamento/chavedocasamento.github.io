@@ -32,9 +32,9 @@ header {
 }
 
 .logo-image {
-    width: 96px; /* Aumentado de 80px para 96px (+20%) */
+    width: 96px;
     height: auto;
-    margin-right: 12px; /* Ajustado proporcionalmente (era 10px) */
+    margin-right: 12px;
 }
 
 .logo h1 {
@@ -70,6 +70,14 @@ nav a {
 
 nav a:hover {
     color: #D3D3D3;
+}
+
+/* Logotipo na Seção */
+.section-logo {
+    display: block;
+    width: 120px; /* Tamanho inicial para desktop */
+    height: auto;
+    margin: 0 auto 20px; /* Centraliza e adiciona espaço abaixo */
 }
 
 /* Seções com Parallax */
@@ -300,8 +308,14 @@ footer a.creator-link:hover {
     }
 
     .logo-image {
-        width: 77px; /* Aumentado de 64px para 77px (+20%) */
-        margin-right: 10px; /* Ajustado proporcionalmente (era 8px) */
+        width: 77px;
+        margin-right: 10px;
+    }
+
+    /* Ajuste do logotipo na seção */
+    .section-logo {
+        width: 96px; /* Reduzido proporcionalmente para tablet */
+        margin-bottom: 15px;
     }
 
     /* Menu Hamburger */
@@ -408,12 +422,18 @@ footer a.creator-link:hover {
     }
 
     .logo-image {
-        width: 58px; /* Aumentado de 48px para 58px (+20%) */
-        margin-right: 8px; /* Ajustado proporcionalmente (era 6px) */
+        width: 58px;
+        margin-right: 8px;
     }
 
     .logo h1 {
         font-size: 18px;
+    }
+
+    /* Ajuste do logotipo na seção */
+    .section-logo {
+        width: 72px; /* Reduzido proporcionalmente para smartphone */
+        margin-bottom: 10px;
     }
 
     .content {
