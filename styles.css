@@ -17,7 +17,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px; /* Mantém a altura original */
+    padding: 20px 50px;
     background-color: #FFF8F5;
     position: fixed;
     width: 100%;
@@ -32,15 +32,27 @@ header {
 }
 
 .logo-image {
-    width: 80px; /* Tamanho ajustado anteriormente */
+    width: 80px;
     height: auto;
-    margin-right: 10px; /* Ajusta o espaçamento para equilibrar */
+    margin-right: 10px;
 }
 
 .logo h1 {
     font-size: 24px;
     color: #333333;
-    margin: 0; /* Remove margem padrão */
+    margin: 0;
+}
+
+/* Estilo do menu hamburger */
+.menu-toggle {
+    display: none; /* Escondido por padrão */
+}
+
+.menu-icon {
+    display: none; /* Escondido em telas grandes */
+    font-size: 24px;
+    cursor: pointer;
+    color: #333333;
 }
 
 nav ul {
@@ -63,17 +75,17 @@ nav a:hover {
 /* Seções com Parallax */
 .parallax-section {
     position: relative;
-    height: 100vh;
+    min-height: 100vh; /* Ajustado para min-height */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     overflow: hidden;
-    background-size: contain; /* Ajusta para conter a imagem sem distorção */
+    background-size: cover; /* Alterado para cover para melhor adaptação */
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Efeito Parallax */
-    background-color: #FFF8F5; /* Cor de fundo padrão para áreas não cobertas */
+    background-attachment: fixed;
+    background-color: #FFF8F5;
 }
 
 .parallax-bg {
@@ -82,7 +94,7 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: inherit; /* Herda o background-size da seção pai */
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
@@ -90,48 +102,50 @@ nav a:hover {
 
 /* Animação de Fade apenas no conteúdo */
 .fade-content {
-    opacity: 0; /* Começa invisível */
-    transition: opacity 1s ease-in-out; /* Transição suave de 1 segundo */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 .fade-content.fade-in {
-    opacity: 1; /* Torna visível quando entra na viewport */
+    opacity: 1;
 }
 
 /* Seções Normais */
 .section {
     padding: 80px 20px;
     text-align: center;
-    background-size: contain; /* Ajusta para conter a imagem sem distorção */
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Efeito Parallax */
-    min-height: 100vh; /* Garante altura total da tela */
+    background-attachment: fixed;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #FFF8F5; /* Fundo padrão */
-    padding-bottom: 80px; /* Espaço extra para evitar sobreposição do rodapé */
+    background-color: #FFF8F5;
+    padding-bottom: 80px;
 }
 
 /* Conteúdo */
 .content {
-    background: rgba(255, 248, 245, 0.8); /* Caixa com transparência */
+    background: rgba(255, 248, 245, 0.8);
     padding: 40px;
     border-radius: 10px;
     max-width: 800px;
     margin: 0 auto;
-    width: 90%; /* Permite que o conteúdo se ajuste melhor */
+    width: 90%;
 }
 
 .content h2 {
     font-size: 36px;
     margin-bottom: 20px;
+    word-wrap: break-word; /* Garante que o texto quebre corretamente */
 }
 
 .content p {
     font-size: 18px;
     margin-bottom: 20px;
+    word-wrap: break-word;
 }
 
 /* Texto das redes sociais */
@@ -146,9 +160,9 @@ nav a:hover {
 /* Grupo de Botões */
 .button-group {
     display: flex;
-    gap: 15px; /* Espaço entre os botões */
-    justify-content: center; /* Centraliza os botões */
-    flex-wrap: wrap; /* Permite que os botões quebrem linha em telas pequenas */
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -168,31 +182,32 @@ nav a:hover {
 }
 
 .btn i {
-    margin-right: 8px; /* Espaço entre o ícone e o texto */
-    font-size: 18px; /* Tamanho do ícone */
+    margin-right: 8px;
+    font-size: 18px;
 }
 
 .btn-whatsapp {
-    background-color: #25D366; /* Cor oficial do WhatsApp */
+    background-color: #25D366;
     color: #fff;
 }
 
 .btn-whatsapp:hover {
-    background-color: #1EBE54; /* Cor mais escura ao passar o mouse */
+    background-color: #1EBE54;
 }
 
 .btn-instagram {
-    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); /* Gradiente do Instagram */
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
     color: #fff;
 }
 
 .btn-instagram:hover {
-    background: linear-gradient(45deg, #d1842c, #c95b35, #bf233b, #b01f58, #a11677); /* Gradiente mais escuro */
+    background: linear-gradient(45deg, #d1842c, #c95b35, #bf233b, #b01f58, #a11677);
 }
 
+/* Grid de Imagens */
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Ajuste para proporção 4:5 */
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 20px;
     justify-content: center;
     margin-top: 20px;
@@ -200,7 +215,7 @@ nav a:hover {
 
 .image-grid img {
     width: 100%;
-    height: 200px; /* Proporção 4:5 (largura 160px para altura 200px) */
+    aspect-ratio: 4 / 5; /* Força a proporção 4:5 */
     object-fit: cover;
     border-radius: 10px;
 }
@@ -220,6 +235,7 @@ form textarea {
     border: 1px solid #D3D3D3;
     border-radius: 5px;
     font-family: 'Montserrat', sans-serif;
+    width: 100%;
 }
 
 form textarea {
@@ -246,8 +262,8 @@ form button:hover {
     font-size: 120px;
     color: #333333;
     margin-top: 40px;
-    display: block; /* Garante que a assinatura ocupe espaço próprio */
-    text-align: center; /* Centraliza a assinatura */
+    display: block;
+    text-align: center;
 }
 
 /* Rodapé Fixo */
@@ -265,7 +281,7 @@ footer {
 /* Responsividade */
 @media (max-width: 768px) {
     header {
-        padding: 15px 20px; /* Mantém a altura original */
+        padding: 15px 20px;
     }
 
     .logo h1 {
@@ -273,16 +289,58 @@ footer {
     }
 
     .logo-image {
-        width: 64px; /* 80% de 80px para telas menores */
+        width: 64px;
         margin-right: 8px;
     }
 
+    /* Menu Hamburger */
+    .menu-icon {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #FFF8F5;
+        padding: 10px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px;
+    }
+
+    .menu-toggle:checked ~ nav {
+        display: block;
+    }
+
+    .content {
+        padding: 30px;
+        width: 100%; /* Garante que o conteúdo ocupe a largura total */
+    }
+
     .content h2 {
-        font-size: 28px;
+        font-size: 24px;
+        line-height: 1.2;
     }
 
     .content p {
-        font-size: 16px;
+        font-size: 14px;
+        line-height: 1.5;
     }
 
     .image-grid {
@@ -290,24 +348,23 @@ footer {
     }
 
     .image-grid img {
-        height: 150px; /* Proporção 4:5 (largura 120px para altura 150px) */
+        aspect-ratio: 4 / 5; /* Mantém a proporção 4:5 */
+        width: 100%;
+        max-width: 300px; /* Limita a largura máxima */
+        margin: 0 auto;
     }
 
     .parallax-section,
     .section {
-        padding: 60px 10px;
-        min-height: 100vh; /* Mantém altura total mesmo em telas menores */
-        padding-bottom: 80px; /* Espaço para o rodapé */
-    }
-
-    .parallax-section,
-    .section {
-        background-size: contain; /* Mantém a proporção em telas menores */
+        padding: 40px 10px;
+        min-height: 80vh; /* Reduz a altura mínima para telas menores */
+        background-attachment: scroll; /* Desativa o parallax em dispositivos móveis */
+        background-size: cover;
     }
 
     .signature {
-        font-size: 80px; /* Reduz o tamanho em telas menores */
-        margin-top: 30px;
+        font-size: 80px;
+        margin-top: 20px;
     }
 
     form {
@@ -315,16 +372,16 @@ footer {
     }
 
     .button-group {
-        gap: 10px; /* Reduz o espaço entre os botões em telas menores */
+        gap: 10px;
     }
 
     .btn {
-        padding: 8px 15px; /* Reduz o padding dos botões */
-        font-size: 14px; /* Reduz o tamanho da fonte */
+        padding: 8px 15px;
+        font-size: 14px;
     }
 
     .btn i {
-        font-size: 16px; /* Ajusta o tamanho do ícone */
+        font-size: 16px;
     }
 
     .social-text {
@@ -335,35 +392,12 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .content {
-        padding: 20px;
-    }
-
-    .btn {
-        padding: 6px 12px; /* Reduz ainda mais o padding */
-        font-size: 12px; /* Reduz ainda mais a fonte */
-    }
-
-    .btn i {
-        font-size: 14px; /* Ajusta o tamanho do ícone */
-        margin-right: 5px; /* Reduz o espaço entre ícone e texto */
-    }
-
-    .image-grid img {
-        height: 150px; /* Mantém a proporção 4:5 em telas muito pequenas */
-    }
-
-    .parallax-section,
-    .section {
-        background-size: contain; /* Ajuste para telas ainda menores */
-    }
-
-    .section {
-        padding-bottom: 80px; /* Espaço para o rodapé */
+    header {
+        padding: 10px 15px;
     }
 
     .logo-image {
-        width: 48px; /* 60% de 80px para telas muito pequenas */
+        width: 48px;
         margin-right: 6px;
     }
 
@@ -371,9 +405,42 @@ footer {
         font-size: 18px;
     }
 
+    .content {
+        padding: 20px;
+    }
+
+    .content h2 {
+        font-size: 20px;
+    }
+
+    .content p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .btn i {
+        font-size: 14px;
+        margin-right: 5px;
+    }
+
+    .image-grid img {
+        max-width: 250px; /* Ajusta para telas muito pequenas */
+    }
+
+    .parallax-section,
+    .section {
+        padding: 30px 10px;
+        min-height: 70vh;
+    }
+
     .signature {
-        font-size: 60px; /* Reduz ainda mais em telas muito pequenas */
-        margin-top: 20px;
+        font-size: 60px;
+        margin-top: 15px;
     }
 
     .social-text {
