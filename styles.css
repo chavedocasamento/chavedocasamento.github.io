@@ -148,6 +148,16 @@ nav a:hover {
     word-wrap: break-word;
 }
 
+/* Imagem Redonda */
+.round-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px auto;
+    display: block;
+}
+
 /* Texto das redes sociais */
 .social-text {
     font-size: 16px;
@@ -365,6 +375,12 @@ footer a.creator-link:hover {
         margin: 0 auto;
     }
 
+    .round-image {
+        width: 150px;
+        height: 150px;
+        margin: 15px auto;
+    }
+
     .parallax-section,
     .section {
         padding: 40px 10px;
@@ -441,6 +457,12 @@ footer a.creator-link:hover {
 
     .image-grid img {
         max-width: 250px; /* Ajusta para telas muito pequenas */
+    }
+
+    .round-image {
+        width: 120px;
+        height: 120px;
+        margin: 10px auto;
     }
 
     .parallax-section,
