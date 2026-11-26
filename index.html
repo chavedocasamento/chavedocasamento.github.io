@@ -3,170 +3,550 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chave do Casamento</title>
+    <meta name="description" content="Chave do Casamento — Assessoria, Consultoria e Cerimonial de Alto Padrão por Anderson Gonçalves. Mais de 30 anos criando casamentos memoráveis no Brasil e no mundo.">
+    <meta property="og:title" content="Chave do Casamento | Anderson Gonçalves — Wedding Planner">
+    <meta property="og:description" content="Transformamos sonhos em celebrações inesquecíveis. Assessoria completa, Destination Weddings e Cerimonial de Luxo.">
+    <meta property="og:image" content="imagens/logo.png">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#D4AF37">
+    <title>Chave do Casamento | Anderson Gonçalves — Assessoria &amp; Cerimonial</title>
+    <link rel="icon" type="image/png" href="imagens/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-    <!-- Adicionando Font Awesome para ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header>
-        <div class="logo">
-            <img src="imagens/logo.png" alt="Logo Chave do Casamento" class="logo-image">
-            <h1>Chave do Casamento</h1>
-        </div>
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">
-            <i class="fas fa-bars"></i>
-        </label>
-        <nav>
+    <!-- Barra de Progresso de Leitura -->
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Cabeçalho Flutuante em Vidro Fosco -->
+    <header id="site-header">
+        <a href="#inicio" class="brand" aria-label="Chave do Casamento - Início">
+            <img src="imagens/logo.png" alt="Logo Chave do Casamento" class="brand-logo">
+            <div class="brand-info">
+                <span class="brand-name">Chave do Casamento</span>
+                <span class="brand-sub">Anderson Gonçalves</span>
+            </div>
+        </a>
+
+        <nav id="main-nav" aria-label="Navegação principal">
             <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">O que Fazemos</a></li>
-                <li><a href="#cerimonia">Cerimônia</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="#sobre-cerimonialista">Sobre o Cerimonialista</a></li>
+                <li><a href="#inicio" class="nav-link active">Início</a></li>
+                <li><a href="#experiencia" class="nav-link">A Experiência</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+                <li><a href="#destinos" class="nav-link">Destinos</a></li>
+                <li><a href="#cerimonialista" class="nav-link">Cerimonialista</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
             </ul>
         </nav>
+
+        <div class="header-actions">
+            <a href="#contato" class="btn-header-cta">Agendar</a>
+            <button type="button" class="menu-toggle-btn" id="menu-toggle-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
     </header>
 
-    <!-- Seção 1: Ideia de Casamento (sem fade) -->
-    <section id="inicio" class="parallax-section" style="background-image: url('imagens/bloco1.png');">
-        <div class="parallax-bg"></div>
-        <div class="content">
-            <h2>Realizamos o seu sonho!</h2>
-            <p>Bem-vindo(a) ao mundo dos sonhos! Aqui na Chave do Casamento, eu, Anderson Gonçalves e minha equipe, transformamos suas ideias em um dia inesquecível. Deixe-nos guiá-los pelo planejamento perfeito, com amor, dedicação e um toque de magia. Vamos criar juntos a celebração que você sempre sonhou!</p>
-            <div class="button-group">
-                <a href="#sobre" class="btn">Saiba Mais</a>
-                <a href="https://wa.me/+5515997530274?text=Olá!%20Gostaria%20de%20informações%20sobre%20Cerimônias%20de%20Casamento!" target="_blank" class="btn btn-whatsapp">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-                <a href="https://instagram.com/chavedocasamento" target="_blank" class="btn btn-instagram">
-                    <i class="fab fa-instagram"></i> Instagram
-                </a>
+    <main>
+        <!-- ==============================================================
+             1. HERO EDITORIAL COM PARTÍCULAS DOURADAS & PARALAXE
+             ============================================================== -->
+        <section id="inicio" class="parallax-section hero-section">
+            <div class="parallax-bg" style="background-image: url('imagens/bloco1.png');" aria-hidden="true"></div>
+            <div class="hero-vignette" aria-hidden="true"></div>
+            <canvas id="gold-particles" class="particles-canvas" aria-hidden="true"></canvas>
+
+            <div class="container hero-layout">
+                <div class="glass-panel hero-glass reveal is-visible">
+                    <div class="hero-brand-row">
+                        <img src="imagens/logo.png" alt="Logo Chave do Casamento" class="hero-brand-logo">
+                        <span class="tag-pill"><i class="fas fa-gem" aria-hidden="true"></i> Assessoria &amp; Cerimonial de Alto Padrão</span>
+                    </div>
+                    <h1>Onde o seu sonho se torna <em>eterno</em>.</h1>
+                    <p class="hero-lead">
+                        Na <strong>Chave do Casamento</strong>, Anderson Gonçalves e sua equipe transformam desejos em celebrações inesquecíveis — unindo planejamento preciso, curadoria estética e um toque de magia em cada instante.
+                    </p>
+
+                    <div class="cta-row">
+                        <a href="#experiencia" class="btn btn-gold">
+                            <span>Descobrir a Experiência</span>
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://wa.me/5515997530274?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consultoria%20para%20meu%20casamento!" target="_blank" rel="noopener noreferrer" class="btn btn-glass-whatsapp">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                            <span>Falar no WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cards flutuantes em vidro fosco -->
+                <div class="hero-metrics reveal is-visible">
+                    <div class="metric-glass">
+                        <span class="metric-value" data-count="30" data-suffix="+">30+</span>
+                        <span class="metric-label">Anos de Trajetória</span>
+                    </div>
+                    <div class="metric-glass">
+                        <span class="metric-value" data-count="5" data-suffix="">5</span>
+                        <span class="metric-label">Continentes Atendidos</span>
+                    </div>
+                    <div class="metric-glass">
+                        <span class="metric-value">RCD</span>
+                        <span class="metric-label">Especialista Certificado</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#experiencia" class="scroll-cue" aria-label="Explorar o site">
+                <span>Role para explorar</span>
+                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </a>
+        </section>
+
+        <!-- Faixa Editorial Animada -->
+        <div class="marquee-bar" aria-hidden="true">
+            <div class="marquee-track">
+                <span>Destination Weddings</span><i class="fas fa-diamond"></i>
+                <span>Assessoria Completa</span><i class="fas fa-diamond"></i>
+                <span>Cerimonial de Luxo</span><i class="fas fa-diamond"></i>
+                <span>Caribe &amp; Europa</span><i class="fas fa-diamond"></i>
+                <span>Design &amp; Harmonia Visual</span><i class="fas fa-diamond"></i>
+                <span>Destination Weddings</span><i class="fas fa-diamond"></i>
+                <span>Assessoria Completa</span><i class="fas fa-diamond"></i>
+                <span>Cerimonial de Luxo</span><i class="fas fa-diamond"></i>
+                <span>Caribe &amp; Europa</span><i class="fas fa-diamond"></i>
+                <span>Design &amp; Harmonia Visual</span><i class="fas fa-diamond"></i>
             </div>
         </div>
-    </section>
 
-    <!-- Seção 2: Casamento Moderno (com fade no conteúdo e parallax) -->
-    <section id="sobre" class="parallax-section" style="background-image: url('imagens/bloco2.png');">
-        <div class="parallax-bg"></div>
-        <div class="content fade-content">
-            <h2>Projetando o seu sonho!</h2>
-            <p>Olá! Tudo começa com nossa primeira reunião: vocês nos contam seus sonhos, e nós montamos um plano personalizado desde o início. Organizamos cada detalhe — da escolha do local à decoração impecável —, coordenamos fornecedores com maestria e garantimos que o dia do seu casamento flua como um conto de fadas. Durante a cerimônia, estamos ao seu lado para que cada olhar, cada lágrima e cada sorriso sejam perfeitos. Na festa, orquestramos a animação, a entrada dos noivos e o corte do bolo, até o último brinde, quando vocês podem relaxar e curtir cada momento. Vamos fazer história juntos?!</p>
-            <div class="image-grid">
-                <img src="imagens/moderno1.jpeg" alt="Imagem Moderno 1">
-                <img src="imagens/moderno2.jpeg" alt="Imagem Moderno 2">
-                <img src="imagens/moderno3.jpeg" alt="Imagem Moderno 3">
-                <img src="imagens/moderno4.jpeg" alt="Imagem Moderno 4">
+        <!-- ==============================================================
+             2. A EXPERIÊNCIA (ETAPAS INTERATIVAS EM VIDRO FOSCO)
+             ============================================================== -->
+        <section id="experiencia" class="parallax-section">
+            <div class="parallax-bg" style="background-image: url('imagens/bloco2.png');" aria-hidden="true"></div>
+            <div class="dark-scrim" aria-hidden="true"></div>
+
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">Jornada Sob Medida</span>
+                    <h2>Do primeiro encontro ao <em>último brinde</em></h2>
+                    <p>Cada casamento é único. Conheça as etapas do nosso acompanhamento completo para que vocês vivam apenas a emoção.</p>
+                </div>
+
+                <div class="process-cards-grid reveal" role="list" aria-label="Etapas do planejamento">
+                    <button type="button" class="glass-panel process-tab" data-step="0">
+                        <span class="step-num">01</span>
+                        <div class="step-info">
+                            <strong>Primeira Reunião</strong>
+                            <small>Escuta e plano personalizado</small>
+                        </div>
+                        <span class="step-action">Ver etapa <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                    </button>
+
+                    <button type="button" class="glass-panel process-tab" data-step="1">
+                        <span class="step-num">02</span>
+                        <div class="step-info">
+                            <strong>Identidade &amp; Visual</strong>
+                            <small>Cores, cenário e fornecedores</small>
+                        </div>
+                        <span class="step-action">Ver etapa <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                    </button>
+
+                    <button type="button" class="glass-panel process-tab" data-step="2">
+                        <span class="step-num">03</span>
+                        <div class="step-info">
+                            <strong>A Cerimônia</strong>
+                            <small>Roteiro minucioso até o "SIM"</small>
+                        </div>
+                        <span class="step-action">Ver etapa <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                    </button>
+
+                    <button type="button" class="glass-panel process-tab" data-step="3">
+                        <span class="step-num">04</span>
+                        <div class="step-info">
+                            <strong>A Recepção</strong>
+                            <small>Gastronomia, música e festa</small>
+                        </div>
+                        <span class="step-action">Ver etapa <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================================
+             3. PORTFÓLIO & DETALHES (GALERIA FILTRÁVEL + LIGHTBOX)
+             ============================================================== -->
+        <section id="portfolio" class="parallax-section">
+            <div class="parallax-bg" style="background-image: url('imagens/bloco3.png');" aria-hidden="true"></div>
+            <div class="dark-scrim" aria-hidden="true"></div>
+
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">Curadoria Estética</span>
+                    <h2>Os mínimos detalhes que <em>encantam</em></h2>
+                    <p>O visual é a alma do seu casamento. Harmonizamos paletas, texturas e iluminação para refletir a essência do casal.</p>
+
+                    <div class="filter-bar" role="group" aria-label="Filtrar galeria por estilo">
+                        <button type="button" class="filter-btn active" data-filter="all">Todos</button>
+                        <button type="button" class="filter-btn" data-filter="moderno">Casamento Moderno</button>
+                        <button type="button" class="filter-btn" data-filter="cores">Cores &amp; Detalhes</button>
+                    </div>
+                </div>
+
+                <div class="bento-gallery reveal" id="bento-gallery">
+                    <button type="button" class="bento-card" data-category="moderno" data-src="imagens/moderno1.jpeg" data-caption="Casamento Moderno — Arquitetura &amp; Iluminação">
+                        <img src="imagens/moderno1.jpeg" alt="Decoração de casamento moderno 1" loading="lazy">
+                        <div class="bento-overlay">
+                            <span class="bento-tag">Moderno</span>
+                            <span class="bento-title">Arquitetura &amp; Luz</span>
+                        </div>
+                    </button>
+
+                    <button type="button" class="bento-card" data-category="cores" data-src="imagens/cores1.jpeg" data-caption="Cores do Casamento — Composição Floral">
+                        <img src="imagens/cores1.jpeg" alt="Paleta de cores e flores 1" loading="lazy">
+                        <div class="bento-overlay">
+                            <span class="bento-tag">Cores</span>
+                            <span class="bento-title">Composição Floral</span>
+                        </div>
+                    </button>
+
+                    <button type="button" class="bento-card" data-category="moderno" data-src="imagens/moderno2.jpeg" data-caption="Casamento Moderno — Mesa Posta &amp; Elegância">
+                        <img src="imagens/moderno2.jpeg" alt="Decoração de casamento moderno 2" loading="lazy">
+                        <div class="bento-overlay">
+                            <span class="bento-tag">Moderno</span>
+                            <span class="bento-title">Mesa Posta</span>
+                        </div>
+                    </button>
+
+                    <button type="button" class="bento-card" data-category="cores" data-src="imagens/cores2.jpeg" data-caption="Cores do Casamento — Harmonia na Cerimônia">
+                        <img src="imagens/cores2.jpeg" alt="Paleta de cores e flores 2" loading="lazy">
+                        <div class="bento-overlay">
+                            <span class="bento-tag">Cores</span>
+                            <span class="bento-title">Harmonia Visual</span>
+                        </div>
+                    </button>
+
+                    <button type="button" class="bento-card" data-category="moderno" data-src="imagens/moderno3.jpeg" data-caption="Casamento Moderno — Recepção Sofisticada">
+                        <img src="imagens/moderno3.jpeg" alt="Decoração de casamento moderno 3" loading="lazy">
+                        <div class="bento-overlay">
+                            <span class="bento-tag">Moderno</span>
+                            <span class="bento-title">Recepção</span>
+                        </div>
+                    </button>
+
+                    <button type="button" class="bento-card" data-category="cores" data-src="imagens/cores3.jpeg" data-caption="Cores do Casamento — Texturas &amp; Acabamentos">
+                        <img src="imagens/cores3.jpeg" alt="Paleta de cores e flores 3" loading="lazy">
+                        <div class="bento-overlay">
+                            <span class="bento-tag">Cores</span>
+                            <span class="bento-title">Texturas &amp; Tom</span>
+                        </div>
+                    </button>
+
+                    <button type="button" class="bento-card" data-category="moderno" data-src="imagens/moderno4.jpeg" data-caption="Casamento Moderno — Ambientação Completa">
+                        <img src="imagens/moderno4.jpeg" alt="Decoração de casamento moderno 4" loading="lazy">
+                        <div class="bento-overlay">
+                            <span class="bento-tag">Moderno</span>
+                            <span class="bento-title">Ambientação</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================================
+             4. DESTINOS & CERIMÔNIA (CARDS GLASSMORPHISM)
+             ============================================================== -->
+        <section id="destinos" class="parallax-section">
+            <div class="parallax-bg" style="background-image: url('imagens/bloco4.png');" aria-hidden="true"></div>
+            <div class="dark-scrim" aria-hidden="true"></div>
+
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">Sem Fronteiras</span>
+                    <h2>Cerimônias icônicas no Brasil e no <em>Mundo</em></h2>
+                    <p>Da entrada triunfal até o último brinde da recepção, coordenamos visitas técnicas e logística completa em destinos nacionais e internacionais.</p>
+                </div>
+
+                <div class="destinations-grid reveal">
+                    <article class="glass-panel dest-card">
+                        <div class="dest-icon"><i class="fas fa-umbrella-beach" aria-hidden="true"></i></div>
+                        <h3>Caribe &amp; Resorts</h3>
+                        <p>Especialização certificada pela <strong>RCD Hoteles</strong> para casamentos à beira-mar e viagens de lua de mel inesquecíveis.</p>
+                    </article>
+
+                    <article class="glass-panel dest-card">
+                        <div class="dest-icon"><i class="fas fa-landmark" aria-hidden="true"></i></div>
+                        <h3>Europa &amp; Clássicos</h3>
+                        <p>Castelos, vilas históricas e cenários atemporais com coordenação de videoconferências e visitas técnicas.</p>
+                    </article>
+
+                    <article class="glass-panel dest-card">
+                        <div class="dest-icon"><i class="fas fa-globe-americas" aria-hidden="true"></i></div>
+                        <h3>Brasil, Américas &amp; Ásia</h3>
+                        <p>Rede consolidada de parceiros de prestígio para eventos impecáveis em qualquer continente.</p>
+                    </article>
+                </div>
+
+                <!-- Sinergia Oficial: DiOr Viagens -->
+                <div class="glass-panel dior-synergy-card reveal">
+                    <div class="dior-logo-mark">
+                        <img src="imagens/dior-logo.png" alt="Logo DiOr Viagens" class="dior-logo-img" loading="lazy">
+                    </div>
+                    <div class="dior-synergy-text">
+                        <span class="eyebrow">Lua de Mel &amp; Travel Concierge</span>
+                        <h3>Experiências integradas com a <em>DiOr Viagens</em></h3>
+                        <p>
+                            Sob a mesma direção de <strong>Anderson Gonçalves</strong>, a <strong>DiOr Viagens</strong> assina a curadoria completa de passagens, hospedagens de luxo e roteiros de lua de mel personalizados para os noivos — conectando o seu grande dia à viagem da sua vida.
+                        </p>
+                    </div>
+                    <a href="https://diorviagens.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dior">
+                        <span>Conhecer a DiOr Viagens</span>
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================================
+             5. ESSÊNCIA & FILOSOFIA (CARROSSEL INTERATIVO)
+             ============================================================== -->
+        <section id="essencia" class="parallax-section compact-section">
+            <div class="parallax-bg" style="background-image: url('imagens/bloco5.png');" aria-hidden="true"></div>
+            <div class="dark-scrim" aria-hidden="true"></div>
+
+            <div class="container">
+                <div class="glass-panel quote-carousel reveal">
+                    <span class="eyebrow">Nossa Essência</span>
+                    <div class="quote-icon" aria-hidden="true"><i class="fas fa-quote-left"></i></div>
+
+                    <blockquote id="quote-text">
+                        "A cerimônia é o coração do seu amor. Cuidamos de cada segundo para que vocês vivam apenas a emoção do 'SIM'."
+                    </blockquote>
+                    <cite id="quote-author">Anderson Gonçalves — Fundador da Chave do Casamento</cite>
+
+                    <div class="quote-controls">
+                        <button type="button" class="quote-btn" id="quote-prev" aria-label="Frase anterior">
+                            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                        </button>
+                        <div class="quote-dots" id="quote-dots" role="tablist" aria-label="Selecionar citação"></div>
+                        <button type="button" class="quote-btn" id="quote-next" aria-label="Próxima frase">
+                            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================================
+             6. SOBRE O CERIMONIALISTA (EDITORIAL ASSIMÉTRICO)
+             ============================================================== -->
+        <section id="cerimonialista" class="parallax-section">
+            <div class="parallax-bg" style="background-image: url('imagens/bloco7.png');" aria-hidden="true"></div>
+            <div class="dark-scrim" aria-hidden="true"></div>
+
+            <div class="container">
+                <div class="glass-panel profile-layout reveal">
+                    <div class="profile-media">
+                        <div class="portrait-frame" id="portrait-tilt">
+                            <img src="imagens/anderson.png" alt="Retrato de Anderson Gonçalves, cerimonialista" loading="lazy">
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-award" aria-hidden="true"></i>
+                            <span>Certificado RCD Hoteles</span>
+                        </div>
+                        <p class="signature">Anderson Gonçalves</p>
+                    </div>
+
+                    <div class="profile-content">
+                        <span class="eyebrow">O Cerimonialista</span>
+                        <h2>Mais de 30 anos celebrando o <em>amor com requinte</em></h2>
+                        <p>
+                            <strong>Anderson Gonçalves</strong> é um renomado Consultor de Casamentos e <em>Wedding Planner</em> com mais de três décadas de atuação, assinando celebrações memoráveis no Caribe, Europa, América do Sul, América do Norte e Ásia.
+                        </p>
+                        <p>
+                            No Brasil, conduz reuniões estratégicas e conecta os noivos aos melhores parceiros do mercado. Em <em>Destination Weddings</em> internacionais, coordena videoconferências e visitas técnicas aos locais escolhidos, assegurando perfeição absoluta em cada detalhe.
+                        </p>
+                        <div class="profile-pillars">
+                            <span><i class="fas fa-check-circle" aria-hidden="true"></i> Exclusividade</span>
+                            <span><i class="fas fa-check-circle" aria-hidden="true"></i> Visitas Técnicas</span>
+                            <span><i class="fas fa-check-circle" aria-hidden="true"></i> Parceiros de Prestígio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================================
+             7. CONCIERGE & CONTATO (FORMULÁRIO INTELIGENTE)
+             ============================================================== -->
+        <section id="contato" class="parallax-section">
+            <div class="parallax-bg" style="background-image: url('imagens/bloco6.png');" aria-hidden="true"></div>
+            <div class="dark-scrim" aria-hidden="true"></div>
+
+            <div class="container">
+                <div class="contact-grid reveal">
+                    <div class="glass-panel contact-info-panel">
+                        <span class="eyebrow">Agora é com você</span>
+                        <h2>Vamos encontrar a <em>data perfeita</em>?</h2>
+                        <p>Converse com a equipe da Chave do Casamento e dê o primeiro passo para transformar o seu grande dia em história.</p>
+
+                        <div class="contact-channels">
+                            <a href="https://wa.me/5515997530274?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20Cerim%C3%B4nias%20de%20Casamento!" target="_blank" rel="noopener noreferrer" class="channel-item">
+                                <span class="channel-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></span>
+                                <div>
+                                    <small>WhatsApp Direto</small>
+                                    <strong>+55 (15) 99753-0274</strong>
+                                </div>
+                            </a>
+
+                            <a href="https://instagram.com/chavedocasamento" target="_blank" rel="noopener noreferrer" class="channel-item">
+                                <span class="channel-icon"><i class="fab fa-instagram" aria-hidden="true"></i></span>
+                                <div>
+                                    <small>Instagram</small>
+                                    <strong>@chavedocasamento</strong>
+                                </div>
+                            </a>
+
+                            <button type="button" class="channel-item channel-copy" id="copy-email-btn" data-email="chavedocasamento@gmail.com">
+                                <span class="channel-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+                                <div>
+                                    <small>E-mail (clique para copiar)</small>
+                                    <strong>chavedocasamento@gmail.com</strong>
+                                </div>
+                                <i class="far fa-copy copy-hint" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel contact-form-panel">
+                        <h3>Solicite sua Consultoria</h3>
+                        <form id="contact-form" novalidate>
+                            <div class="style-selector">
+                                <span class="field-label">Estilo desejado:</span>
+                                <div class="chip-group" role="group" aria-label="Estilo do casamento">
+                                    <button type="button" class="style-chip active" data-style="Casamento Moderno">Moderno</button>
+                                    <button type="button" class="style-chip" data-style="Clássico &amp; Luxo">Clássico</button>
+                                    <button type="button" class="style-chip" data-style="Destination Wedding">Destination</button>
+                                    <button type="button" class="style-chip" data-style="Mini Wedding">Mini Wedding</button>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="input-group">
+                                    <label for="nome">Seu nome</label>
+                                    <input type="text" id="nome" name="nome" placeholder="Nome dos noivos ou seu nome" required autocomplete="name">
+                                </div>
+                                <div class="input-group">
+                                    <label for="data-evento">Previsão da data</label>
+                                    <input type="text" id="data-evento" name="data" placeholder="Ex: Outubro/2027">
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="email">Seu melhor e-mail</label>
+                                <input type="email" id="email" name="email" placeholder="voce@exemplo.com" required autocomplete="email">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="mensagem">Conte seus sonhos</label>
+                                <textarea id="mensagem" name="mensagem" placeholder="Local desejado, número estimado de convidados ou ideias..." required></textarea>
+                            </div>
+
+                            <div id="form-feedback" class="form-feedback" role="status" aria-live="polite"></div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-gold">
+                                    <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                                    <span>Enviar por E-mail</span>
+                                </button>
+                                <button type="button" id="send-whatsapp-btn" class="btn btn-glass-whatsapp">
+                                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                                    <span>Enviar via WhatsApp</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Popup Modal das Etapas (Jornada Sob Medida) -->
+    <div id="process-modal" class="process-modal" role="dialog" aria-modal="true" aria-labelledby="process-modal-title" hidden>
+        <div class="glass-panel process-modal-card">
+            <button type="button" class="modal-close-x" id="process-modal-x" aria-label="Fechar janela">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <div id="process-modal-body"></div>
+            <div class="process-modal-footer">
+                <button type="button" class="btn btn-outline-dior" id="process-modal-close-btn">Fechar</button>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Seção 3: Cores do Casamento (com fade no conteúdo e parallax) -->
-    <section class="parallax-section" style="background-image: url('imagens/bloco3.png');">
-        <div class="parallax-bg"></div>
-        <div class="content fade-content">
-            <h2>Os mínimos detalhes...</h2>
-            <p>O visual é a alma do seu casamento! Com a nossa orientação, escolheremos o cenário do seu sonho com um toque elegante, mas é claro, sempre seguindo as suas opiniões e gostos. Vamos harmonizar cada detalhe para refletir sua personalidade!</p>
-            <div class="image-grid">
-                <img src="imagens/cores1.jpeg" alt="Cores do Casamento 1">
-                <img src="imagens/cores2.jpeg" alt="Cores do Casamento 2">
-                <img src="imagens/cores3.jpeg" alt="Cores do Casamento 3">
-            </div>
-        </div>
-    </section>
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Visualização ampliada" hidden>
+        <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Fechar">
+            <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Anterior">
+            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <figure class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <figcaption id="lightbox-caption"></figcaption>
+        </figure>
+        <button type="button" class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Próxima">
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+        </button>
+    </div>
 
-    <!-- Seção 4: Cerimônia de Casamento (com fade no conteúdo e parallax) -->
-    <section id="cerimonia" class="parallax-section" style="background-image: url('imagens/bloco4.png');">
-        <div class="parallax-bg"></div>
-        <div class="content fade-content">
-            <h2>O sonho se tornando realidade!</h2>
-            <p>A cerimônia é o coração do seu amor. Nós da Chave do Casamento, faremos um planejamento minucioso para criar um momento mágico, desde a entrada triunfal na celebração até o 'SIM' emocionante. E é claro, a recepção dos convidados; momento de alegria, ótimas comidas e muita música. Deixe-nos cuidar de tudo para que vocês vivam apenas a emoção!</p>
-        </div>
-    </section>
+    <!-- Toast de Notificação -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
-    <!-- Seção 5: Agora é com você! (sem fade, com parallax) -->
-    <section class="parallax-section" style="background-image: url('imagens/bloco5.png');">
-        <div class="parallax-bg"></div>
-        <div class="content">
-            <h2>Agora é com você!</h2>
-            <p>Vamos dar o próximo passo e tornar seu sonho em realidade? Entre em contato com a nossa equipe de cerimonialistas e vamos encontrar a data perfeita para o seu grande dia. Estamos aqui para ouvir suas ideias e transformar seus planos em algo inesquecível para você e seus amigos!</p>
-        </div>
-    </section>
+    <!-- Botão Voltar ao Topo -->
+    <button type="button" id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
 
-    <!-- Seção 6: Entre em Contato Conosco (sem fade, com parallax) -->
-    <section id="contato" class="section" style="background-image: url('imagens/bloco6.png');">
-        <div class="content">
-            <h2>Entre em Contato Conosco</h2>
-            <p>Vamos conversar? Preencha o formulário abaixo e conte seus sonhos à equipe de Anderson Gonçalves. Estamos ansiosos para fazer parte da sua história!</p>
-            <form>
-                <input type="text" name="nome" placeholder="Nome" required>
-                <input type="email" name="email" placeholder="E-mail" required>
-                <textarea name="mensagem" placeholder="Mensagem" required></textarea>
-                <button type="submit" onclick="enviarEmail(event)">Enviar</button>
-            </form>
-            <p class="social-text">...ou entre em contato pelas nossas redes sociais abaixo:</p>
-            <div class="button-group">
-                <a href="https://wa.me/+5515997530274?text=Olá!%20Gostaria%20de%20informações%20sobre%20Cerimônias%20de%20Casamento!" target="_blank" class="btn btn-whatsapp">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-                <a href="https://instagram.com/chavedocasamento" target="_blank" class="btn btn-instagram">
-                    <i class="fab fa-instagram"></i> Instagram
-                </a>
-            </div>
-            <p class="signature">Anderson Gonçalves</p>
-        </div>
-    </section>
-
-    <!-- Seção 7: Sobre o Cerimonialista (sem fade, com parallax) -->
-    <section id="sobre-cerimonialista" class="parallax-section" style="background-image: url('imagens/bloco7.png');">
-        <div class="parallax-bg"></div>
-        <div class="content">
-            <h2>Sobre o Cerimonialista...</h2>
-            <img src="imagens/anderson.png" alt="Foto de Anderson Gonçalves" class="round-image">
-            <p>Anderson Gonçalves, cerimonialista da Chave do Casamento, é um renomado CONSULTOR de casamentos e WEDDING PLANER com uma trajetória de mais de 30 anos, marcada pela realização de cerimônias memoráveis em destinos icônicos como o Caribe, Europa, América do Sul, América do Norte e Ásia. Certificado pela distinguida RCD Hoteles como especialista em casamentos e viagens de lua de mel, ele possui a habilidade singular de conceber celebrações únicas, caracterizadas por elegância e exclusividade, atendendo aos mais altos padrões de sofisticação.</p>
-            <p>Sob sua direção, a Chave do Casamento oferece um serviço de excelência e distinção. Para eventos realizados no Brasil, Anderson Gonçalves conduz reuniões formais e apresenta oportunidades de interação com parceiros de prestígio, assegurando uma experiência impecável. Em casamentos internacionais, proporciona a conveniência de videoconferências e coordena visitas técnicas aos locais escolhidos, garantindo que cada detalhe seja minuciosamente planejado. Com um compromisso inabalável com a perfeição, Anderson Gonçalves eleva a arte de celebrar o amor a um patamar de requinte e profissionalismo inigualáveis.</p>
-        </div>
-    </section>
-
-    <!-- Rodapé -->
+    <!-- Rodapé Editorial -->
     <footer>
-        <p>© 2025 Chave do Casamento. Todos os direitos reservados. <a href="https://instagram.com/ideia_by_guttonerd" target="_blank" class="creator-link">- Make by: ideIA -</a></p>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="imagens/logo.png" alt="Logo Chave do Casamento" class="footer-logo">
+                <p>Assessoria e Cerimonial de Casamentos com mais de 30 anos de excelência no Brasil e no exterior.</p>
+                <p class="footer-address"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Parque Campolim — Sorocaba/SP</p>
+            </div>
+            <div class="footer-links">
+                <strong>Navegação</strong>
+                <a href="#inicio">Início</a>
+                <a href="#experiencia">A Experiência</a>
+                <a href="#portfolio">Portfólio</a>
+                <a href="#cerimonialista">Cerimonialista</a>
+                <a href="#contato">Contato</a>
+            </div>
+            <div class="footer-social">
+                <strong>Grupo Anderson Gonçalves</strong>
+                <a href="https://diorviagens.com" target="_blank" rel="noopener noreferrer" class="footer-partner-link">
+                    <i class="fas fa-plane-departure" aria-hidden="true"></i> DiOr Viagens — Viva o Extraordinário
+                </a>
+                <div class="footer-social-icons">
+                    <a href="https://wa.me/5515997530274" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://instagram.com/chavedocasamento" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="mailto:chavedocasamento@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 <strong>Chave do Casamento</strong>. Todos os direitos reservados.</span>
+            <a href="https://instagram.com/idia_marketingvisual" target="_blank" rel="noopener noreferrer" class="creator-link">Feito por: ID:IA - Marketing Visual</a>
+        </div>
     </footer>
 
-    <!-- Script para animação de fade e envio de e-mail -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const contents = document.querySelectorAll('.fade-content');
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('fade-in');
-                    }
-                });
-            }, { threshold: 0.3 }); // Dispara quando 30% do conteúdo está visível
-
-            contents.forEach(content => {
-                observer.observe(content);
-            });
-        });
-
-        function enviarEmail(event) {
-            event.preventDefault(); // Impede o envio padrão do formulário
-
-            const nome = encodeURIComponent(document.querySelector('input[name="nome"]').value);
-            const email = encodeURIComponent(document.querySelector('input[name="email"]').value);
-            const mensagem = encodeURIComponent(document.querySelector('textarea[name="mensagem"]').value);
-
-            const subject = `Contato de ${nome}`;
-            const body = `Nome: ${nome}%0D%0AEmail: ${email}%0D%0AMensagem: ${mensagem}`;
-
-            const mailtoLink = `mailto:chavedocasamento@gmail.com?subject=${subject}&body=${body}`;
-            window.location.href = mailtoLink;
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
